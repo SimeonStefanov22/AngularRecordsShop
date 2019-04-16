@@ -8,9 +8,11 @@ import { RouterModule, Routes } from '@angular/router';
 })
 export class NavigationComponent implements OnInit {
 
+  successRegUser: boolean;
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

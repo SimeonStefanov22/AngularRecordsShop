@@ -1,29 +1,27 @@
 <div class="container">
-  <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm.value)">
+  <form #registerForm="ngForm" (ngSubmit)="registerUser(registerForm.value)">
     <div class="form-group">
-
       <label>Name</label>
       <br/>
-      <input #nameModel="ngModel" ngModel  type="text" name="name" required>
-      <div *ngIf="nameModel.touched && nameModel.invalid" class="error-input">Name is required</div>
-
-
+      <input #nameModel="ngModel" ngModel  type="text" name="username" required>
     </div>
+    <div *ngIf="nameModel.touched && nameModel.invalid" class="error-input">Name is required</div>
 
     <div class="form-group">
       <label>Email</label>
       <br/>
-      <input #emailModel="ngModel" ngModel type="text" name="email" required>
-      <div *ngIf="emailModel.touched && nameModel.invalid" class="error-input">Email is required</div>
-
+      <input #emailModel="ngModel" ngModel type="email" name="email" required>
     </div>
+    <div *ngIf="emailModel.touched && emailModel.invalid" class="error-input">Email is required</div>
+
 
     <div class="form-group">
       <label>Password</label>
       <br/>
-      <input #passModel="ngModel" ngModel  type="password" name="password" required>
-      <div *ngIf="passModel.touched && passModel.invalid" class="error-input">Password is required</div>
+      <input #passModel="ngModel" ngModel  type="password" minlength="3" maxlength="20" name="hashedPassword" required>
     </div>
+    <div *ngIf="passModel.touched && passModel.invalid" class="error-input">Password is required</div>
+
     <button [disabled]="registerForm.invalid">Register</button>
   </form>
 </div>
