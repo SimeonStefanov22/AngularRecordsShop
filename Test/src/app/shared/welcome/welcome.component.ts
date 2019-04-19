@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {WelcomeService} from "../welcome.service";
+import {WelcomeService} from "../../services/welcome.service";
 
 @Component({
   selector: 'app-welcome',

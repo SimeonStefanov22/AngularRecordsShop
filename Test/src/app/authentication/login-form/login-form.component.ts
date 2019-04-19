@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
-import {LoginService} from "../login.service";
+import {LoginService} from "../../services/login.service";
 import {Router} from "@angular/router";
 
 @Component({

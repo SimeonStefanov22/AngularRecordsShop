@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
-import {CreateVinilService} from "../create-vinil.service";
+import {CreateVinilService} from "../../services/create-vinil.service";
 
 @Component({
   selector: 'app-create-vinil',

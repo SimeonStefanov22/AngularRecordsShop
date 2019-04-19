@@ -7,8 +7,8 @@ import {MainComponent} from "./main/main.component";
 import {VinilComponent} from "./Vinils/vinil/vinil.component";
 import { WelcomeComponent } from './welcome/welcome.component';
 //Services
-import {WelcomeService} from "./welcome.service";
-import {VinilsService} from "./Vinils/vinils.service";
+import {WelcomeService} from "../services/welcome.service";
+import {VinilsService} from "../services/vinils.service";
 
 
 @NgModule({

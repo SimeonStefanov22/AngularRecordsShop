@@ -1,9 +1,9 @@
-nav{
+.adminNav{
   background: rgb(0, 0, 0);
 
 }
 
-nav ul{
+.adminNav ul{
   display: flex;
   justify-content: space-around;
   margin: 0;
@@ -11,7 +11,7 @@ nav ul{
 
 }
 
-nav ul li{
+.adminNav ul li{
   list-style: none;
   background: rgb(41, 73, 64);
   border: 1px solid rgb(0, 0, 0);
@@ -20,7 +20,7 @@ nav ul li{
   margin-bottom: 0.5em;
 }
 
-nav ul li a{
+.adminNav ul li a{
   text-decoration: none;
   font-size: 1.5em;
 

@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {RegistrationService} from "../registration.service";
+import {RegistrationService} from "../../services/registration.service";
 import {HttpClient} from "@angular/common/http";
 import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";

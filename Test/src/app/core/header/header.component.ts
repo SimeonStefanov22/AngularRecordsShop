@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {IHeader} from "./domain/header";
+import {IHeader} from "../../models/header";
 
 @Component({
   selector: 'app-header',

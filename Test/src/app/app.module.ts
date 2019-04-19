@@ -9,10 +9,12 @@ import {AuthenticationModule} from "./authentication/authentication.module";
 import {SharedModule} from "./shared/shared.module";
 import {AdminModule} from "./admin/admin.module";
 //Services
-import {VinilsService} from "./shared/Vinils/vinils.service";
-import {RegistrationService} from "./authentication/registration.service";
-import {LoginService} from "./authentication/login.service";
-import {CreateVinilService} from "./admin/create-vinil.service";
+import {VinilsService} from "./services/vinils.service";
+import {RegistrationService} from "./services/registration.service";
+import {LoginService} from "./services/login.service";
+import {CreateVinilService} from "./services/create-vinil.service";
+import {RouterModule, Routes} from "@angular/router";
+import {AuthGardGuard} from "./authentication/gards/auth-gard.guard";
 
 
 
@@ -28,13 +30,15 @@ import {CreateVinilService} from "./admin/create-vinil.service";
     CoreModule,
     AuthenticationModule,
     SharedModule,
-    AdminModule
+    AdminModule,
+    RouterModule
   ],
   providers: [
     VinilsService,
     RegistrationService,
     LoginService,
-    CreateVinilService
+    CreateVinilService,
+    AuthGardGuard
 
   ],
   bootstrap: [AppComponent]

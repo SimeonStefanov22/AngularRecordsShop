@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {VinilsService} from "../vinils.service";
+import {VinilsService} from "../../../services/vinils.service";
 import {Observable} from "rxjs";
 
 

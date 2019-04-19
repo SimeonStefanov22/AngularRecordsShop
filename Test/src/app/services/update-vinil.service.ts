@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
+import {CreateVinilModel} from "../models/createVinilModel";
 import {HttpClient} from "@angular/common/http";
-import {CreateVinilModel} from "./createVinilModel";
-import {NgForm} from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
 })
-export class CreateVinilService {
+export class UpdateVinilService {
 
   model: CreateVinilModel
+
   constructor(private httpClient: HttpClient) { }
 
   postData(data){
@@ -21,7 +21,7 @@ export class CreateVinilService {
         price: data.price
       }
 
-    const url = 'http://localhost:9999/feed/game/create';
+    const url = 'http://localhost:9999/feed/games/' //+ id;
     return this.httpClient.post(url, this.model, {headers: {'Content-Type': 'application/json'}})
 
   }
