@@ -1,0 +1,35 @@
+<div class="container">
+  <form #createVinilForm="ngForm" (ngSubmit)="createVinil(createVinilForm.value)">
+
+    <div class="form-group">
+      <label>Name</label>
+      <br/>
+      <input #titleModel="ngModel" ngModel  type="text" name="title" required>
+    </div>
+    <div *ngIf="titleModel.touched && titleModel.invalid" class="error-input">Title is required</div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <br/>
+      <textarea #descriptionModel="ngModel" ngModel  type="text" name="description" required></textarea>
+    </div>
+    <div *ngIf="descriptionModel.touched && descriptionModel.invalid" class="error-input">Description is required</div>
+
+    <div class="form-group">
+      <label>ImageUrl</label>
+      <br/>
+      <input #imageModel="ngModel" ngModel  type="text" name="imageUrl" required>
+    </div>
+    <div *ngIf="imageModel.touched && imageModel.invalid" class="error-input">Image is required</div>
+
+    <div class="form-group">
+      <label>Price</label>
+      <br/>
+      <input #priceModel="ngModel" ngModel  type="text" name="price" required>
+    </div>
+    <div *ngIf="priceModel.touched && priceModel.invalid" class="error-input">Price is required</div>
+
+    <button [disabled]="createVinilForm.invalid">Create vinil</button>
+
+  </form>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {CommonModule} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navigation',
@@ -8,11 +10,19 @@ import { RouterModule, Routes } from '@angular/router';
 })
 export class NavigationComponent implements OnInit {
 
-  successRegUser: boolean;
-  constructor() { }
+
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
 
   }
 
+logout(){
+    localStorage.clear();
+    this.router.navigateByUrl("")
 }
+
+
+}
+

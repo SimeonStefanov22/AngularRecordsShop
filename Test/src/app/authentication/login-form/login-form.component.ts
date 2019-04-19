@@ -1,34 +1,31 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {RegistrationService} from "../registration.service";
-import {HttpClient} from "@angular/common/http";
 import {NgForm} from "@angular/forms";
+import {HttpClient} from "@angular/common/http";
+import {LoginService} from "../login.service";
 import {Router} from "@angular/router";
 
-
-
 @Component({
-  selector: 'app-registration-form',
-  templateUrl: './registration-form.component.html',
-  styleUrls: ['./registration-form.component.css']
+  selector: 'app-login-form',
+  templateUrl: './login-form.component.html',
+  styleUrls: ['./login-form.component.css']
 })
-export class RegistrationFormComponent implements OnInit {
+export class LoginFormComponent implements OnInit {
   userData: any;
 
-  @ViewChild('registerForm')
+  @ViewChild('loginForm')
   htmlForm: NgForm;
 
-  constructor(private registerService: RegistrationService,private httpClient: HttpClient, private router: Router) {}
+  constructor(private loginService: LoginService, private httpClient: HttpClient,private router: Router) { }
+
 
   ngOnInit() {
-
   }
 
-
-  registerUser(value){
+  loginUser(value){
     console.log(this.htmlForm);
     this.htmlForm.reset();
 
-    this.registerService.postData(value)
+    this.loginService.postData(value)
       .subscribe( data => {
         console.log(data);
         this.userData = data;
@@ -41,7 +38,5 @@ export class RegistrationFormComponent implements OnInit {
 
       })
   }
-
-
 
 }

@@ -11,14 +11,10 @@ import {Observable} from "rxjs";
 })
 export class VinilComponent implements OnInit {
 
-  isShown: boolean = false;
   vinilsData: any;
-
-
-
+  token;
 
   constructor(  private vinilsService: VinilsService) {}
-
 
   ngOnInit():void {
     this.vinilsService.getVinils()
@@ -28,10 +24,9 @@ export class VinilComponent implements OnInit {
         console.log(this.vinilsData);
       })
 
+    this.token = this.vinilsService.userIsLog()
 
   }
-
-
 
 
 }

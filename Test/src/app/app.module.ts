@@ -7,9 +7,13 @@ import {HttpClientModule} from "@angular/common/http";
 import {CoreModule} from "./core/core.module";
 import {AuthenticationModule} from "./authentication/authentication.module";
 import {SharedModule} from "./shared/shared.module";
+import {AdminModule} from "./admin/admin.module";
 //Services
 import {VinilsService} from "./shared/Vinils/vinils.service";
 import {RegistrationService} from "./authentication/registration.service";
+import {LoginService} from "./authentication/login.service";
+import {CreateVinilService} from "./admin/create-vinil.service";
+
 
 
 @NgModule({
@@ -23,11 +27,14 @@ import {RegistrationService} from "./authentication/registration.service";
     HttpClientModule,
     CoreModule,
     AuthenticationModule,
-    SharedModule
+    SharedModule,
+    AdminModule
   ],
   providers: [
     VinilsService,
     RegistrationService,
+    LoginService,
+    CreateVinilService
 
   ],
   bootstrap: [AppComponent]

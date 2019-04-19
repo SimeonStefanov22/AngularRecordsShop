@@ -6,6 +6,7 @@ import {NavigationComponent} from "./navigation/navigation.component";
 import {FooterComponent} from "./footer/footer.component";
 import {HeaderComponent} from "./header/header.component";
 
+
 @NgModule({
   declarations: [
     NavigationComponent,
@@ -15,6 +16,7 @@ import {HeaderComponent} from "./header/header.component";
   imports: [
     CommonModule,
     RouterModule
+
   ],
   exports: [
     NavigationComponent,

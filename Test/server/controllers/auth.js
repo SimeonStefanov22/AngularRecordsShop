@@ -1,3 +1,4 @@
+
 const { validationResult } = require('express-validator/check');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
@@ -29,8 +30,14 @@ module.exports = {
         username,
         salt
       }).then((user) => {
+        const token = jwt.sign({
+            username: user.username,
+            userId: user._id.toString()
+          }
+          , 'somesupersecret'
+          , { expiresIn: '1h' });
         res.status(201)
-          .json({ message: 'User created!', userId: user._id, username: user.username });
+          .json({ message: 'User created!',token, userId: user._id, username: user.username });
       })
       .catch((error) => {
         if (!error.statusCode) {

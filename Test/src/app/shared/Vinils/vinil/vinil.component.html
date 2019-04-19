@@ -2,10 +2,11 @@
 
     <div class="imageVinil" *ngFor="let vinil of vinilsData">
       <img class="image" [src]="vinil.imageUrl" alt="image">
-      <div class="info">
+      <div *ngIf="token" class="info">
         <p>Title: {{vinil.title}}</p>
         <p>Description: {{vinil.description}}</p>
         <p>Price: {{vinil.price}}</p>
+        <button className="buttonBuy">Buy</button>
       </div>
     </div>
 

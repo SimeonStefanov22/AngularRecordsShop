@@ -4,20 +4,25 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import {RegistrationService} from "./registration.service";
+import { LoginFormComponent } from './login-form/login-form.component';
+import {LoginService} from "./login.service";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
-  declarations: [RegistrationFormComponent],
+  declarations: [RegistrationFormComponent, LoginFormComponent],
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   exports:[
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    LoginFormComponent
   ],
   providers:[
     RegistrationService,
-
+    LoginService
   ]
 })
 export class AuthenticationModule { }
