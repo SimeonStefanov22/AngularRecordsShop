@@ -7,10 +7,17 @@ import {Router} from "@angular/router";
   styleUrls: ['./admin-navigation.component.css']
 })
 export class AdminNavigationComponent implements OnInit {
-
+  admin: string;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  isAdmin(){
+    this.admin = localStorage.getItem('userId');
+    if(this.admin === "5c8c0be3db4c1e2264fe894e"){
+      return true;
+    }
   }
 
 }

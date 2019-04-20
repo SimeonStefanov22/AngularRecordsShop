@@ -7,8 +7,11 @@
         <p>Description: {{vinil.description}}</p>
         <p>Price: {{vinil.price}}</p>
         <button>Buy</button>
-        <button id="{{vinil._id}}" class="buttonBuy" routerLink="/update" routerLinkActive="active">Update</button>
-        <button routerLink="/delete" routerLinkActive="active">Delete</button>
+        <div *ngIf="isAdmin()">
+          <button id="{{vinil._id}}" class="buttonBuy" routerLink="/update" routerLinkActive="active">Update</button>
+          <button routerLink="/delete" routerLinkActive="active">Delete</button>
+        </div>
+
       </div>
     </div>
 
