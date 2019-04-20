@@ -7,9 +7,11 @@ import { AdminNavigationComponent } from './admin-navigation/admin-navigation.co
 import {RouterModule} from "@angular/router";
 import { UpdateVinilComponent } from './update-vinil/update-vinil.component';
 import {UpdateVinilService} from "../services/update-vinil.service";
+import {DeleteVinylService} from "../services/delete-vinyl.service";
+import { DeleteVinilComponent } from './delete-vinil/delete-vinil.component';
 
 @NgModule({
-  declarations: [CreateVinilComponent, AdminNavigationComponent, UpdateVinilComponent],
+  declarations: [CreateVinilComponent, AdminNavigationComponent, UpdateVinilComponent, DeleteVinilComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -18,11 +20,13 @@ import {UpdateVinilService} from "../services/update-vinil.service";
   exports: [
     CreateVinilComponent,
     AdminNavigationComponent,
-    UpdateVinilComponent
+    UpdateVinilComponent,
+    DeleteVinilComponent
   ],
   providers: [
     CreateVinilService,
-    UpdateVinilService
+    UpdateVinilService,
+    DeleteVinylService
   ]
 })
 export class AdminModule { }

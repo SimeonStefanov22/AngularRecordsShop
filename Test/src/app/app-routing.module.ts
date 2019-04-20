@@ -7,6 +7,7 @@ import {WelcomeComponent} from "./shared/welcome/welcome.component";
 import {CreateVinilComponent} from "./admin/create-vinil/create-vinil.component";
 import {AuthGardGuard} from "./authentication/gards/auth-gard.guard";
 import {UpdateVinilComponent} from "./admin/update-vinil/update-vinil.component";
+import {DeleteVinilComponent} from "./admin/delete-vinil/delete-vinil.component";
 
 
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationFormComponent},
   { path: 'login', component: LoginFormComponent},
   { path: 'create', component: CreateVinilComponent, canActivate: [AuthGardGuard]},
-  { path: 'update', component: UpdateVinilComponent, canActivate: [AuthGardGuard]},
+  { path: 'update/:id', component: UpdateVinilComponent, canActivate: [AuthGardGuard]},
+  { path: 'delete/:id', component: DeleteVinilComponent, canActivate: [AuthGardGuard]},
   { path: "", redirectTo: "home", pathMatch: "full"}
 
 

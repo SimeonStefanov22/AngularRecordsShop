@@ -1,28 +1,28 @@
 <div class="container">
-  <form #updateVinilForm="ngForm" (ngSubmit)="updateVinil(createVinilForm.value)">
+  <form #updateVinilForm="ngForm" (ngSubmit)="updateVinil(updateVinilForm.value)">
 
     <div class="form-group">
       <label>Name</label>
       <br/>
-      <input #titleModel="ngModel" ngModel  type="text" name="title" required>
+      <input #titleModel="ngModel" ngModel  type="text" name="title">
     </div>
 
     <div class="form-group">
       <label>Description</label>
       <br/>
-      <textarea #descriptionModel="ngModel" ngModel  type="text" name="description" required></textarea>
+      <textarea #descriptionModel="ngModel" ngModel  type="text" name="description"></textarea>
     </div>
 
     <div class="form-group">
       <label>ImageUrl</label>
       <br/>
-      <input #imageModel="ngModel" ngModel  type="text" name="imageUrl" required>
+      <input #imageModel="ngModel" ngModel  type="text" name="imageUrl">
     </div>
 
     <div class="form-group">
       <label>Price</label>
       <br/>
-      <input #priceModel="ngModel" ngModel  type="text" name="price" required>
+      <input #priceModel="ngModel" ngModel  type="text" name="price">
     </div>
 
     <button>Update vinil</button>

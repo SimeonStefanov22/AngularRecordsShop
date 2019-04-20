@@ -15,6 +15,8 @@ import {LoginService} from "./services/login.service";
 import {CreateVinilService} from "./services/create-vinil.service";
 import {RouterModule, Routes} from "@angular/router";
 import {AuthGardGuard} from "./authentication/gards/auth-gard.guard";
+import {UpdateVinilService} from "./services/update-vinil.service";
+import {DeleteVinylService} from "./services/delete-vinyl.service";
 
 
 
@@ -38,6 +40,8 @@ import {AuthGardGuard} from "./authentication/gards/auth-gard.guard";
     RegistrationService,
     LoginService,
     CreateVinilService,
+    UpdateVinilService,
+    DeleteVinylService,
     AuthGardGuard
 
   ],

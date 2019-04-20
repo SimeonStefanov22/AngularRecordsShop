@@ -33,5 +33,9 @@ export class VinilComponent implements OnInit {
     }
   }
 
+  //getId(id){
+  //  return id;//
+  //}
+
 
 }

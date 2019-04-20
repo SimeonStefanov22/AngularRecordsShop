@@ -1,17 +1,19 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {CreateVinilModel} from "../models/createVinilModel";
 import {HttpClient} from "@angular/common/http";
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class UpdateVinilService {
+export class UpdateVinilService{
 
-  model: CreateVinilModel
+  model: CreateVinilModel;
+  id: string;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient,) { }
 
-  postData(data){
+  postData(data, id){
 
     this.model =
       {
@@ -21,8 +23,11 @@ export class UpdateVinilService {
         price: data.price
       }
 
-    const url = 'http://localhost:9999/feed/games/' //+ id;
-    return this.httpClient.post(url, this.model, {headers: {'Content-Type': 'application/json'}})
+    console.log(id);
+
+    const url = 'http://localhost:9999/feed/games/' + id;
+
+    return this.httpClient.put(url, this.model, {headers: {'Content-Type': 'application/json'}})
 
   }
 }
