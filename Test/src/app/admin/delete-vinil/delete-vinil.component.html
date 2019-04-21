@@ -1,3 +1,15 @@
-<p>
-  delete-vinil works!
-</p>
+<div *ngIf="vinilData" class="container">
+
+  <div class="imageVinil">
+    <img class="image" [src]="vinilData.imageUrl" alt="image">
+    <div class="info">
+      <p>Title: {{vinilData.title}}</p>
+      <p>Description: {{vinilData.description}}</p>
+      <p>Price: ${{vinilData.price}}</p>
+
+      <button (click)="deleteVinil()">Delete</button>
+
+    </div>
+  </div>
+
+</div>

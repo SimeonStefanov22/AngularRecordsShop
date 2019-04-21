@@ -16,6 +16,21 @@ module.exports = {
                 next(error);
             });
     },
+  getOneRecord: (req, res, next) => {
+    const id = req.params.id;
+      Record.findById(id)
+        .then((record) => {
+          res
+            .status(200)
+            .json({ message: 'Fetched one record successfully.', record });
+        })
+        .catch((error) => {
+          if(!error.statusCode){
+            error.statusCode = 500;
+          }
+          next(error);
+        });
+  },
     createRecord: (req, res, next) => {
         const recordObj = req.body;
         console.log(req.body);

@@ -6,6 +6,7 @@ router.get('/games', feedController.getRecords);
 router.post('/game/create', feedController.createRecord);
 router.delete('/games/:id', feedController.deleteRecord);
 router.put('/games/:id', feedController.updateRecord);
+router.get('/games/:id', feedController.getOneRecord);
 
 
 module.exports = router;

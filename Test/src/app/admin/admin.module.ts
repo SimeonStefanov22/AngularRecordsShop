@@ -4,7 +4,7 @@ import {FormsModule} from "@angular/forms";
 import { CreateVinilComponent } from './create-vinil/create-vinil.component';
 import {CreateVinilService} from "../services/create-vinil.service";
 import { AdminNavigationComponent } from './admin-navigation/admin-navigation.component';
-import {RouterModule} from "@angular/router";
+import { RouterModule} from "@angular/router";
 import { UpdateVinilComponent } from './update-vinil/update-vinil.component';
 import {UpdateVinilService} from "../services/update-vinil.service";
 import {DeleteVinylService} from "../services/delete-vinyl.service";
@@ -15,7 +15,8 @@ import { DeleteVinilComponent } from './delete-vinil/delete-vinil.component';
   imports: [
     CommonModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+
   ],
   exports: [
     CreateVinilComponent,

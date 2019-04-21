@@ -9,7 +9,12 @@ export class DeleteVinylService {
   constructor(private httpClient: HttpClient) { }
 
   getVinil(id){
-    const url = "http://localhost:9999/feed/games" + id;
+    const url = "http://localhost:9999/feed/games/" + id;
     return this.httpClient.get(url);
+  }
+
+  delete(id){
+    const url = "http://localhost:9999/feed/games/" + id;
+    return this.httpClient.delete(url);
   }
 }
