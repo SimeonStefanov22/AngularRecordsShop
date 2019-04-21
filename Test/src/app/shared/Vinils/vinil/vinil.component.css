@@ -1,8 +1,13 @@
+.vinylContent{
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap ;
+}
 .imageVinil{
   margin: 1.22em;
   border: 1px solid black;
 
-  display: inline-block;
+  /*display: inline-block;*/
   background: white;
 }
 .image{

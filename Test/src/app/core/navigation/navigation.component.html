@@ -1,10 +1,13 @@
 <nav>
   <ul>
     <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
-    <li><a routerLink="/registration" routerLinkActive="active">Registration</a></li>
-    <li><a routerLink="" routerLinkActive="active" (click)="logout()">Logout</a></li>
+    <li *ngIf="!isToken()"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li *ngIf="!isToken()"><a routerLink="/registration" routerLinkActive="active">Registration</a></li>
+    <li *ngIf="isAdmin()" class="adminNav"><a routerLink="/create" routerLinkActive="active">Create vinil</a></li>
+    <li *ngIf="isAdmin()" class="adminNav"><a routerLink="/users" routerLinkActive="active">List users</a></li>
+    <li *ngIf="isToken()"><a routerLink="" routerLinkActive="active" (click)="logout()">Logout</a></li>
     <li><a routerLink="/about" routerLinkActive="active" (click)="logout()">About</a></li>
+
   </ul>
 </nav>
 

@@ -1,7 +1,9 @@
+//Modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule} from "@angular/router";
 
+//Components
 import {NavigationComponent} from "./navigation/navigation.component";
 import {FooterComponent} from "./footer/footer.component";
 import {HeaderComponent} from "./header/header.component";
@@ -11,17 +13,20 @@ import {HeaderComponent} from "./header/header.component";
   declarations: [
     NavigationComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+
 
   ],
   exports: [
     NavigationComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+
   ]
 })
 export class CoreModule { }

@@ -11,6 +11,7 @@ import {WelcomeService} from "../services/welcome.service";
 import {VinilsService} from "../services/vinils.service";
 
 
+
 @NgModule({
   declarations: [
     MainComponent,
@@ -19,7 +20,8 @@ import {VinilsService} from "../services/vinils.service";
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   exports: [
     MainComponent,
