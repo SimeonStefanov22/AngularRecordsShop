@@ -1,4 +1,5 @@
 .container{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROcP6TDNOsRFaY6o7cTfIVKUxVvHq4u7bdDte4XNBbrWr2xzzX");
   border: 1px solid black;
   margin: 2em;
 
@@ -8,39 +9,42 @@
   font-size: 2.2em;
 }
 
-.container label input{
-  width: 20em;
-  height: 2em;
+.form-group{
+  margin-top: 1em;
 }
-
-.container input[type="submit"]{
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid white;
-  background: #455859;
-  color: white;
-  font-size:18px;
-
-
-}
-
 
 input{
 
   font-size: 1em;
+  margin-top: 0.5em;
+
 }
 textarea{
-
+  width: 15em;
   font-size: 1em;
+  margin-top: 0.5em;
+
+}
+label{
+  color: red;
+  background: rgb(0, 0, 0);
+  padding: 0.2em;
+
 }
 button{
-  font-size: 1.3em;
+  font-size: 1em;
+  width: 100%;
   margin: 0.5em 0 0.5em 0;
+  color: red;
+  background: rgb(41, 73, 64);
+  border-style: none;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+
+
 }
 .error-input{
   color: red;
-  font-size: 0.8em;
+  font-size: 0.6em;
+  background: rgb(0, 0, 0);
 }

@@ -1,8 +1,8 @@
 header{
-  background: rgb(200, 177, 140);
   display: flex;
   justify-content: space-between;
-
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIK69sxiI47J2DbLnLW7bA_E5B_UCmdTV0UTBQ3ysk77_DPL3_");
+  background: black;
 }
 
 h1{
@@ -13,6 +13,7 @@ h1{
 
 span:first-of-type{
   margin: 0.5em 0 0 0.5em;
+
 }
 
 .cart{
@@ -25,9 +26,10 @@ span:first-of-type{
   height: 0.2em;
   font-size: 1.3em;
 
+
 }
 
 #cartTotal{
-  color: rgb(41, 73, 64);
   margin-top: 0;
+  color: white;
 }

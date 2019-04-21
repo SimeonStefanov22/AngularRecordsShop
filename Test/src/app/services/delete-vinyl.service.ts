@@ -8,8 +8,8 @@ export class DeleteVinylService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getVinils(){
-    const url = "http://localhost:9999/feed/games" //+ id;
+  getVinil(id){
+    const url = "http://localhost:9999/feed/games" + id;
     return this.httpClient.get(url);
   }
 }

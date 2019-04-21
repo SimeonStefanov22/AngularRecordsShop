@@ -1,21 +1,21 @@
 .imageVinil{
   margin: 1.22em;
   border: 1px solid black;
-  border-radius: 5px;
+
   display: inline-block;
+  background: white;
 }
 .image{
   height: 220px;
   width: 220px;
+
 }
 .info{
   padding: 1em;
-  background: rgb(200, 177, 140);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
   display: flex;
   flex-direction: column;
   flex-shrink: inherit;
+  background: white;
 
 }
 
@@ -32,9 +32,11 @@ button{
   border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
   margin-top: 0.2em;
+  color: white;
 }
 button:hover{
-  color: white;
+  cursor: pointer;
+  color: red;
 }
 button:focus {
   outline: none;

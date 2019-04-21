@@ -5,7 +5,7 @@
       <div *ngIf="token" class="info">
         <p>Title: {{vinil.title}}</p>
         <p>Description: {{vinil.description}}</p>
-        <p>Price: {{vinil.price}}</p>
+        <p>Price: ${{vinil.price}}</p>
         <button>Buy</button>
         <div *ngIf="isAdmin()">
           <button routerLink="/update/{{vinil._id}}" routerLinkActive="active">Update</button>

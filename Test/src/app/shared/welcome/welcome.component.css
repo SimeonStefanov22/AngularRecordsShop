@@ -1,8 +1,11 @@
 div{
   text-align: center;
+  padding: 0.2em;
 
 }
 .welcome{
-  font-size: 1.3em;
+  font-size: 1.6em;
+  font-style: italic;
   color: white;
+
 }
