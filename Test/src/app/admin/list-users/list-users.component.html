@@ -1,0 +1,12 @@
+<h1>List users</h1>
+<div *ngIf="usersData" class="userContent">
+
+
+  <div class="user" *ngFor="let user of usersData">
+    <p>Name: {{user.username}}</p>
+    <p>Email: {{user.email}}</p>
+    <button routerLink="/user/{{user._id}}" routerLinkActive="active">Delete</button>
+
+  </div>
+
+</div>

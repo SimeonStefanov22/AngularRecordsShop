@@ -17,6 +17,8 @@ import {RouterModule, Routes} from "@angular/router";
 import {AuthGardGuard} from "./authentication/gards/auth-gard.guard";
 import {UpdateVinilService} from "./services/update-vinil.service";
 import {DeleteVinylService} from "./services/delete-vinyl.service";
+import {ListUsersService} from "./services/list-users.service";
+import {DeleteUserService} from "./services/delete-user.service";
 
 
 
@@ -42,7 +44,9 @@ import {DeleteVinylService} from "./services/delete-vinyl.service";
     CreateVinilService,
     UpdateVinilService,
     DeleteVinylService,
-    AuthGardGuard
+    AuthGardGuard,
+    ListUsersService,
+    DeleteUserService
 
   ],
   bootstrap: [AppComponent]

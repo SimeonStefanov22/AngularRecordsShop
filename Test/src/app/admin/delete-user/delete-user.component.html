@@ -1,0 +1,14 @@
+<div *ngIf="userData" class="container">
+
+
+
+    <div class="user">
+      <p>Name: {{userData.username}}</p>
+      <p>Email: {{userData.email}}</p>
+
+      <button (click)="deleteUser()">Delete</button>
+
+    </div>
+
+
+</div>

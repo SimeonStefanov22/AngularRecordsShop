@@ -8,9 +8,12 @@ import { UpdateVinilComponent } from './update-vinil/update-vinil.component';
 import {UpdateVinilService} from "../services/update-vinil.service";
 import {DeleteVinylService} from "../services/delete-vinyl.service";
 import { DeleteVinilComponent } from './delete-vinil/delete-vinil.component';
+import { ListUsersComponent } from './list-users/list-users.component';
+import {ListUsersService} from "../services/list-users.service";
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
 @NgModule({
-  declarations: [CreateVinilComponent, UpdateVinilComponent, DeleteVinilComponent],
+  declarations: [CreateVinilComponent, UpdateVinilComponent, DeleteVinilComponent, ListUsersComponent, DeleteUserComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -20,11 +23,15 @@ import { DeleteVinilComponent } from './delete-vinil/delete-vinil.component';
   exports: [
     CreateVinilComponent,
     UpdateVinilComponent,
-    DeleteVinilComponent
+    DeleteVinilComponent,
+    ListUsersComponent,
+    DeleteUserComponent
   ],
   providers: [
     CreateVinilService,
     UpdateVinilService,
+    DeleteVinylService,
+    ListUsersService,
     DeleteVinylService
   ]
 })

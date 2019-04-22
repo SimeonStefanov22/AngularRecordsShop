@@ -1,4 +1,5 @@
 const Record = require('../models/Record');
+const User = require('../models/User');
 
 module.exports = {
     getRecords: (req, res, next) => {
@@ -104,7 +105,58 @@ module.exports = {
                 })
             })
 
-    }
+    },
+  getUsers: (req, res, next) => {
+    User.find()
+      .then((users) => {
+        res
+          .status(200)
+          .json({ message: 'Fetched users successfully.', users });
+
+      })
+      .catch((error) => {
+        if (!error.statusCode) {
+          error.statusCode = 500;
+        }
+        next(error);
+      });
+  },
+  deleteUser: (req, res, next) => {
+    const id = req.params.id;
+    User.findById(id)
+      .then((user) => {
+        user
+          .remove()
+          .then(() => {
+            return res.status(200).json({
+              success: true,
+              message: 'User deleted successfully!'
+            })
+          })
+      })
+      .catch(() => {
+        return res.status(200).json({
+          success: false,
+          message: 'Entry does not exist!'
+        })
+      })
+
+  },
+  getOneUser: (req, res, next) => {
+    const id = req.params.id;
+    User.findById(id)
+      .then((user) => {
+        res
+          .status(200)
+          .json({ message: 'Fetched one user successfully.', user });
+      })
+      .catch((error) => {
+        if(!error.statusCode){
+          error.statusCode = 500;
+        }
+        next(error);
+      });
+  }
 
 
 }

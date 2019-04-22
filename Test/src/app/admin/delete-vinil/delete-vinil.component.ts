@@ -39,11 +39,10 @@ export class DeleteVinilComponent implements OnInit {
 
 
   deleteVinil(){
-    console.log("Test");
-    console.log(this.id);
+    //console.log(this.id);
     this.deleteVinilService.delete(this.id)
       .subscribe((data) => {
-        console.log(data);
+        //console.log(data);
       })
     this.router.navigateByUrl("/home");
 
