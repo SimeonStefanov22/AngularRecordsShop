@@ -13,9 +13,10 @@ export class VinilComponent implements OnInit {
 
   vinilsData: any;
   token;
+  isAdmin: boolean;
 
   constructor(  private vinilsService: VinilsService) {}
-  admin: string;
+
   ngOnInit():void {
     this.vinilsService.getVinils()
       .subscribe(data => {
@@ -24,14 +25,11 @@ export class VinilComponent implements OnInit {
         console.log(this.vinilsData);
       })
 
-    this.token = this.vinilsService.userIsLog()
+    this.token = this.vinilsService.userIsLog();
+    this.isAdmin = this.vinilsService.isAdmin();
+
   }
-  isAdmin(){
-    this.admin = localStorage.getItem('userId');
-    if(this.admin === "5c8c0be3db4c1e2264fe894e"){
-      return true;
-    }
-  }
+
 
 
 }

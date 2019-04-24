@@ -18,6 +18,7 @@ function validateUser(req, res) {
 }
 
 module.exports = {
+
   signUp: (req, res, next) => {
 
     if (validateUser(req, res)) {
@@ -30,14 +31,24 @@ module.exports = {
         username,
         salt
       }).then((user) => {
+
         const token = jwt.sign({
             username: user.username,
             userId: user._id.toString()
           }
           , 'somesupersecret'
           , { expiresIn: '1h' });
+
         res.status(201)
-          .json({ message: 'User created!',token, userId: user._id, username: user.username });
+            .json(
+              {
+                message: 'User created!'
+                ,token
+                , userId: user._id,
+                username: user.username,
+              });
+
+
       })
       .catch((error) => {
         if (!error.statusCode) {
@@ -65,20 +76,24 @@ module.exports = {
           throw error;
         }
 
-        const token = jwt.sign({ 
-          username: user.username,
-          userId: user._id.toString()
-        }
-        , 'somesupersecret'
-        , { expiresIn: '1h' });
+        const token = jwt.sign({
+            username: user.username,
+            userId: user._id.toString()
+          }
+          , 'somesupersecret'
+          , { expiresIn: '1h' });
 
-         res.status(200).json(
-           { 
-             message: 'User successfully logged in!', 
-             token, 
-             userId: user._id.toString(),
-             username: user.username
-           });
+
+        res.status(200).json(
+            {
+              message: 'User successfully logged in!',
+              token,
+              userId: user._id.toString(),
+              username: user.username
+            });
+
+
+
       })
       .catch(error => {
         if (!error.statusCode) {

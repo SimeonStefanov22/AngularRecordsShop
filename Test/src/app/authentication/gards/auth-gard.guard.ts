@@ -7,23 +7,19 @@ import { Observable } from 'rxjs';
 })
 export class AuthGardGuard implements CanActivate {
   admin: string = "";
+  token: string;
 
   constructor(private route: Router){}
 
   canActivate(){
 
-    this.admin = localStorage.getItem('userId');
-    if(this.admin === "5c8c0be3db4c1e2264fe894e"){
+    this.token = localStorage.getItem('token');
+    if(this.token){
       return true;
     }else{
       this.route.navigateByUrl('home');
       return false;
-
-
     }
-
-
-
 
   }
 
