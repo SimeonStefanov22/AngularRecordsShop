@@ -28,12 +28,12 @@ export class DeleteVinilComponent implements OnInit {
 
     })
 
-
     this.deleteVinilService.getVinil(this.id)
       .subscribe((data) =>{
         this.response = data;
         this.vinilData = this.response.record;
       })
+
 
   }
 
@@ -42,9 +42,12 @@ export class DeleteVinilComponent implements OnInit {
     //console.log(this.id);
     this.deleteVinilService.delete(this.id)
       .subscribe((data) => {
-        //console.log(data);
+        console.log(data);
+        this.router.navigateByUrl('/home');
       })
-    this.router.navigateByUrl("/home");
+
 
   }
+
+
 }
