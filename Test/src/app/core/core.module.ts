@@ -7,6 +7,8 @@ import {RouterModule} from "@angular/router";
 import {NavigationComponent} from "./navigation/navigation.component";
 import {FooterComponent} from "./footer/footer.component";
 import {HeaderComponent} from "./header/header.component";
+import {BuyVinilService} from "../services/buy-vinil.service";
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -14,6 +16,7 @@ import {HeaderComponent} from "./header/header.component";
     NavigationComponent,
     FooterComponent,
     HeaderComponent,
+    CartComponent,
 
   ],
   imports: [
@@ -26,7 +29,11 @@ import {HeaderComponent} from "./header/header.component";
     NavigationComponent,
     FooterComponent,
     HeaderComponent,
+    CartComponent
 
+  ],
+  providers: [
+    BuyVinilService
   ]
 })
 export class CoreModule { }

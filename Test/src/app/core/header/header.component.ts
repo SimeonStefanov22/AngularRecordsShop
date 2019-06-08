@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {IHeader} from "../../models/header";
+
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,22 @@ import {IHeader} from "../../models/header";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-products: Array<IHeader>;
+
+
   constructor() {
-    this.products = [{countProducts: 3, totalPrice: 56}];
+
+
   }
 
   ngOnInit() {
+
   }
+
+
+
+
+
+
+
 
 }

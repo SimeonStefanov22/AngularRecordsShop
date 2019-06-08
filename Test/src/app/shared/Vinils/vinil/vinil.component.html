@@ -6,7 +6,7 @@
         <p>Title: {{vinil.title}}</p>
         <p>Description: {{vinil.description}}</p>
         <p>Price: ${{vinil.price}}</p>
-        <button>Buy</button>
+        <button (click)="addProductToCard(vinil.price)">Buy</button>
         <div *ngIf="isAdmin">
           <button routerLink="/update/{{vinil._id}}" routerLinkActive="active">Update</button>
           <button routerLink="/delete/{{vinil._id}}" routerLinkActive="active">Delete</button>

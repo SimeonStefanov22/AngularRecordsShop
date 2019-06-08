@@ -19,6 +19,7 @@ import {UpdateVinilService} from "./services/update-vinil.service";
 import {DeleteVinylService} from "./services/delete-vinyl.service";
 import {ListUsersService} from "./services/list-users.service";
 import {DeleteUserService} from "./services/delete-user.service";
+import {BuyVinilService} from "./services/buy-vinil.service";
 
 
 
@@ -46,7 +47,9 @@ import {DeleteUserService} from "./services/delete-user.service";
     DeleteVinylService,
     AuthGardGuard,
     ListUsersService,
-    DeleteUserService
+    DeleteUserService,
+    BuyVinilService
+
 
   ],
   bootstrap: [AppComponent]
