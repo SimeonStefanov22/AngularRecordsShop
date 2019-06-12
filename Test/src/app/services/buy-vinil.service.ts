@@ -5,25 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class BuyVinilService {
 
-  vinylsData: Array<number>;
-  data: Array<any>;
+ totalPrice: number = 0;
+ countProducts: number = 0;
+ infoBuyVinyls: Array<number>;
 
 
   constructor() { }
 
-  calcCountAndPriceVinyls(infoBuyVinyl){
-    this.vinylsData = infoBuyVinyl;
-    //console.log(this.vinylsData);
+  addProductToCard(vinylPrice) {
+    this.totalPrice += Number(vinylPrice);
+    this.countProducts++;
+    this.infoBuyVinyls = [this. countProducts, this.totalPrice]
+    console.log("click");
+    console.log(this.totalPrice);
+    console.log(this.countProducts);
+
+
 
 
   }
 
-  getData(){
-     this.data = this.vinylsData;
-     return this.data;
-  }
 
-  isClicked(){
 
-  }
 }

@@ -36,16 +36,9 @@ export class VinilComponent implements OnInit {
 
   }
 
-  addProductToCard(vinylPrice) {
-    this.totalPrice += Number(vinylPrice);
-    this.countProducts++;
-    this.infoBuyVinyls = [this. countProducts, this.totalPrice]
-
-
-    this.buyVinylService.calcCountAndPriceVinyls(this.infoBuyVinyls)
-
-  }
-
+  addProductToCard(vinilPrice){
+    this.buyVinylService.addProductToCard(vinilPrice)
+}
 
 }
 

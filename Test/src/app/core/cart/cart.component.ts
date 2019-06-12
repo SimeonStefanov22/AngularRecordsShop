@@ -7,18 +7,18 @@ import {BuyVinilService} from "../../services/buy-vinil.service";
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  //vinylData: Array<number>;
-  vinylData: Array<number> = this.calcDataVinyls.getData();
-  countVinyls: number = 0;
   totalPrice: number = 0;
+  countVinyls: number = 0;
 
-
-  constructor(private calcDataVinyls: BuyVinilService) {
-
-  }
+  constructor(private buyVinilService: BuyVinilService) {}
 
   ngOnInit() {
 
+  }
+
+  ngDoCheck(){
+    this.totalPrice = this.buyVinilService.totalPrice;
+    this.countVinyls = this.buyVinilService.countProducts;
   }
 
 
